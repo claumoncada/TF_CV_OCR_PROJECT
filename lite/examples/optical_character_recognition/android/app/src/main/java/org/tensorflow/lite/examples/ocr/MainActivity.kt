@@ -48,14 +48,26 @@ private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
 
-  private val tfImageName = "tensorflow.jpg"
+  private val tfImageName = "tensorflow.jpg" /* 1ST IMAGE */
   private val androidImageName = "android.jpg"
   private val chromeImageName = "chrome.jpg"
+  private val customImageName = "custom.jpg" /* ---> CUSTOM IMAGE */
+  private val churchImageName = "church.jpg" /* ---> CHURCH IMAGE */
+  private val emiratesImageName = "emirates.jpg" /* ---> EMIRATES IMAGE */
+  private val heritageImageName = "heritage.jpg" /* ---> HERITAGE IMAGE */
+
   private lateinit var viewModel: MLExecutionViewModel
   private lateinit var resultImageView: ImageView
-  private lateinit var tfImageView: ImageView
+
+  private lateinit var tfImageView: ImageView /* TensorFlow Image view */
   private lateinit var androidImageView: ImageView
   private lateinit var chromeImageView: ImageView
+  private lateinit var customImageView: ImageView /* --->  Custom Image view */
+  private lateinit var churchImageView: ImageView
+  private lateinit var emiratesImageView: ImageView
+  private lateinit var heritageImageView: ImageView
+
+
   private lateinit var chipsGroup: ChipGroup
   private lateinit var runButton: Button
   private lateinit var textPromptTextView: TextView
@@ -75,23 +87,46 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(toolbar)
     supportActionBar?.setDisplayShowTitleEnabled(false)
 
-    tfImageView = findViewById(R.id.tf_imageview)
+    tfImageView = findViewById(R.id.tf_imageview) /* TENSORFLOW IMAGE VIEW */
     androidImageView = findViewById(R.id.android_imageview)
     chromeImageView = findViewById(R.id.chrome_imageview)
+    customImageView = findViewById(R.id.custom_imageview) /* ---> CUSTOM IMAGE VIEW */
+    churchImageView = findViewById(R.id.church_imageview)
+    emiratesImageView = findViewById(R.id.emirates_imageview)
+    heritageImageView = findViewById(R.id.heritage_imageview)
 
-    val candidateImageViews = arrayOf<ImageView>(tfImageView, androidImageView, chromeImageView)
+    val candidateImageViews = arrayOf<ImageView>(tfImageView, androidImageView, chromeImageView, customImageView, churchImageView, emiratesImageView, heritageImageView) /* ---> ADD CUSTOM IMAGE VIEW */
 
     val assetManager = assets
     try {
-      val tfInputStream: InputStream = assetManager.open(tfImageName)
+      val tfInputStream: InputStream = assetManager.open(tfImageName) /* 1ST IMAGE */
       val tfBitmap = BitmapFactory.decodeStream(tfInputStream)
       tfImageView.setImageBitmap(tfBitmap)
-      val androidInputStream: InputStream = assetManager.open(androidImageName)
+
+      val androidInputStream: InputStream = assetManager.open(androidImageName) /* 2ND IMAGE */
       val androidBitmap = BitmapFactory.decodeStream(androidInputStream)
       androidImageView.setImageBitmap(androidBitmap)
-      val chromeInputStream: InputStream = assetManager.open(chromeImageName)
+
+      val chromeInputStream: InputStream = assetManager.open(chromeImageName) /* 3rd IMAGE */
       val chromeBitmap = BitmapFactory.decodeStream(chromeInputStream)
       chromeImageView.setImageBitmap(chromeBitmap)
+
+      val customInputStream: InputStream = assetManager.open(customImageName) /* ---> CUSTOM IMAGE */
+      val customBitmap = BitmapFactory.decodeStream(customInputStream)
+      customImageView.setImageBitmap(customBitmap)
+
+      val churchInputStream: InputStream = assetManager.open(churchImageName) /* ---> CHURCH IMAGE */
+      val churchBitmap = BitmapFactory.decodeStream(churchInputStream)
+      churchImageView.setImageBitmap(churchBitmap)
+
+      val emiratesInputStream: InputStream = assetManager.open(emiratesImageName) /* ---> EMIRATES IMAGE */
+      val emiratesBitmap = BitmapFactory.decodeStream(emiratesInputStream)
+      emiratesImageView.setImageBitmap(emiratesBitmap)
+
+      val heritageInputStream: InputStream = assetManager.open(heritageImageName) /* ---> HERITAGE IMAGE */
+      val heritageBitmap = BitmapFactory.decodeStream(heritageInputStream)
+      heritageImageView.setImageBitmap(heritageBitmap)
+
     } catch (e: IOException) {
       Log.e(TAG, "Failed to open a test image")
     }
@@ -151,7 +186,7 @@ class MainActivity : AppCompatActivity() {
       object : View.OnTouchListener {
         override fun onTouch(v: View, event: MotionEvent?): Boolean {
           if (v.equals(tfImageView)) {
-            selectedImageName = tfImageName
+            selectedImageName = tfImageName /* Select image */
             textPromptTextView.setText(getResources().getString(R.string.tfe_using_first_image))
           } else if (v.equals(androidImageView)) {
             selectedImageName = androidImageName
@@ -159,6 +194,30 @@ class MainActivity : AppCompatActivity() {
           } else if (v.equals(chromeImageView)) {
             selectedImageName = chromeImageName
             textPromptTextView.setText(getResources().getString(R.string.tfe_using_third_image))
+          }
+          /* =====BEGINS CUSTOM IMAGE======================= */
+           else if (v.equals(customImageView)) {
+            selectedImageName = customImageName
+            textPromptTextView.setText(getResources().getString(R.string.tfe_using_fourth_image))
+          /* ===================ENDS CUSTOM IMAGE================================= */
+          }
+
+           else if (v.equals(churchImageView)) {
+            selectedImageName = churchImageName
+            textPromptTextView.setText(getResources().getString(R.string.tfe_using_fifth_image))
+            /* ===================ENDS CUSTOM IMAGE================================= */
+          }
+
+           else if (v.equals(emiratesImageView)) {
+            selectedImageName = emiratesImageName
+            textPromptTextView.setText(getResources().getString(R.string.tfe_using_sixth_image))
+            /* ===================ENDS CUSTOM IMAGE================================= */
+          }
+
+           else if (v.equals(heritageImageView)) {
+            selectedImageName = heritageImageName
+            textPromptTextView.setText(getResources().getString(R.string.tfe_using_seventh_image))
+            /* ===================ENDS CUSTOM IMAGE================================= */
           }
           return false
         }

@@ -56,6 +56,35 @@
                     android:layout_height="@dimen/tfe_is_preview_size"
                     android:contentDescription="@string/tfe_chrome_image_description"
                     android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/custom_imageview"
+                    android:layout_width="@dimen/tfe_is_preview_size"
+                    android:layout_height="@dimen/tfe_is_preview_size"
+                    android:contentDescription="@string/tfe_custom_image_description"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/church_imageview"
+                    android:layout_width="@dimen/tfe_is_preview_size"
+                    android:layout_height="@dimen/tfe_is_preview_size"
+                    android:contentDescription="@string/tfe_church_image_description"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/emirates_imageview"
+                    android:layout_width="@dimen/tfe_is_preview_size"
+                    android:layout_height="@dimen/tfe_is_preview_size"
+                    android:contentDescription="@string/tfe_emirates_image_description"
+                    android:padding="8dp" />
+
+                <ImageView
+                    android:id="@+id/heritage_imageview"
+                    android:layout_width="@dimen/tfe_is_preview_size"
+                    android:layout_height="@dimen/tfe_is_preview_size"
+                    android:contentDescription="@string/tfe_heritage_image_description"
+                    android:padding="8dp" />
+                    
             </LinearLayout>
         </HorizontalScrollView>
 
