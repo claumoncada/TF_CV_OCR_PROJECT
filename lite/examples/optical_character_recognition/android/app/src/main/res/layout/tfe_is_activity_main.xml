@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/tfl2_logo_dark" />
+            android:src="@drawable/fondo2" />
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
@@ -84,7 +84,7 @@
                     android:layout_height="@dimen/tfe_is_preview_size"
                     android:contentDescription="@string/tfe_heritage_image_description"
                     android:padding="8dp" />
-                    
+
             </LinearLayout>
         </HorizontalScrollView>
 
