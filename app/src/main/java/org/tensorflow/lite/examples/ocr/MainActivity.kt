@@ -49,12 +49,12 @@ private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
 
   private val tfImageName = "tensorflow.jpg" /* 1ST IMAGE */
-  private val androidImageName = "android.jpg"
-  private val chromeImageName = "chrome.jpg"
-  private val customImageName = "custom.jpg" /* ---> CUSTOM IMAGE */
-  private val churchImageName = "church.jpg" /* ---> CHURCH IMAGE */
+  private val androidImageName = "custom.jpg"
+  private val chromeImageName = "att.jpg"   //"chrome.jpg"
+  private val customImageName = "covid.jpg" /* ---> CUSTOM IMAGE */
+  private val churchImageName = "score.jpg" /* ---> CHURCH IMAGE */
   private val emiratesImageName = "emirates.jpg" /* ---> EMIRATES IMAGE */
-  private val heritageImageName = "heritage.jpg" /* ---> HERITAGE IMAGE */
+  private val heritageImageName = "image7.jpg" /* ---> HERITAGE IMAGE */
 
   private lateinit var viewModel: MLExecutionViewModel
   private lateinit var resultImageView: ImageView

@@ -362,6 +362,7 @@ class OCRModelExecutor(context: Context, private var useGPU: Boolean = false) : 
   companion object {
     public const val TAG = "TfLiteOCRDemo"
     private const val textDetectionModel = "text_detection.tflite"
+    //private const val textRecognitionModel = "07_01_2023_00_40.tflite"
     //private const val textRecognitionModel = "04_01_23_2_24.tflite"
     private const val textRecognitionModel = "recognition_model4.tflite"
     //private const val textRecognitionModel = "04_01_2023_23_05.tflite"
