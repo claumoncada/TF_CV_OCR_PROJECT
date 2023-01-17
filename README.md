@@ -14,18 +14,18 @@ pipeline to recognize texts.
 
 ### Step 1. Clone the TensorFlow examples source code
 
-Clone the TensorFlow examples GitHub repository to your computer to get the demo
+Clone the TF_CV_OCR_PROJECT GitHub repository to your computer to get the demo
 application.
 
 ```
-git clone https://github.com/tensorflow/examples
+git clone https://github.com/claumoncada/TF_CV_OCR_PROJECT
 ```
 
 ### Step 2. Import the sample app to Android Studio
 
 Open the TensorFlow source code in Android Studio. To do this, open Android
 Studio and select `Import Projects (Gradle, Eclipse ADT, etc.)`, setting the
-folder to `examples/lite/examples/optical_character_recognition/android`
+folder to `TF_CV_OCR_PROJECT`
 
 ### Step 3. Run the Android app
 
@@ -42,29 +42,14 @@ under `app/build/outputs/apk`.
 
 ## Limitations
 
-*   The current
-    [text recognition model](https://tfhub.dev/tulasiram58827/lite-model/keras-ocr/float16/2)
-    is trained using synthetic data with English letters and numbers, so only
-    English is supported.
+*   The current text recognition model is an improvement of the original
+    [keras-ocr model](https://tfhub.dev/tulasiram58827/lite-model/keras-ocr/float16/2) trained with English letters and numbers.
+    In the same as the original, the new model  was trained using synthetic data but adding new characters to the alphabet.
 
-*   The models are not general enough for OCR in the wild (say, random images
+*   The current model, similar to the original, is not general enough for OCR in the wild (say, random images
     taken by a smartphone camera in a low lighting condition).
 
-So we have chosen 3 Google product logos only to demonstrate how to do OCR with
-TensorFlow Lite. If you are looking for a ready-to-use production-grade OCR
-product, you should consider
-[Google ML Kit](https://developers.google.com/ml-kit/vision/text-recognition).
-ML Kit, which uses TFLIte underneath, should be sufficient for most OCR use
-cases, but there are some cases where you may want to build your own OCR
-solution with TFLite. Some examples are:
 
-*   You have your own text detection/recognition TFLite models that you would
-    like to use
-*   You have special business requirements (i.e., recognizing texts that are
-    upside down) and need to customize the OCR pipeline
-*   You want to support languages not covered by ML Kit
-*   Your target user devices don’t necessarily have Google Play services
-    installed
 
 ## References
 
@@ -76,3 +61,6 @@ solution with TFLite. Some examples are:
     https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
 *   Deep Learning based Text Detection Using OpenCV:
     https://learnopencv.com/deep-learning-based-text-detection-using-opencv-c-python/
+*   Optical Character Recognition (OCR):
+    https://www.tensorflow.org/lite/examples/optical_character_recognition/overview
+
