@@ -1,8 +1,7 @@
-# OCR (Optical Character Recognition) Android sample.
+# OCR (Optical Character Recognition) Android App.
 
 OCR is the process of recognizing characters from images using computer vision
-and machine learning techniques. This reference app demos how to use TensorFlow
-Lite to do OCR. It uses a text detection model and a text recognition model as a
+and machine learning techniques. The current implementation uses the EAST detection model and the Keras-OCR text recognition model as a
 pipeline to recognize texts.
 
 ## Requirements
@@ -44,7 +43,7 @@ under `app/build/outputs/apk`.
 
 *   The current text recognition model is an improvement of the original
     [keras-ocr model](https://tfhub.dev/tulasiram58827/lite-model/keras-ocr/float16/2) trained with English letters and numbers.
-    In the same as the original, the new model  was trained using synthetic data but adding new characters to the alphabet.
+    In the same way as the original, the new model  was trained using synthetic data but adding new characters to the alphabet.
 
 *   The current model, similar to the original, is not general enough for OCR in the wild (say, random images
     taken by a smartphone camera in a low lighting condition).
