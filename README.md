@@ -40,7 +40,7 @@ For gradle CLI, running `./gradlew build` can create APKs for both solutions
 under `app/build/outputs/apk`.
 
 # Download the APK-DEMO
-Please feel free to download the OCR demo application directly from google drive at: https://drive.google.com/file/d/1YxZNUN5SP73qWeoGEgN1mYVyykc9ckaI/view
+Feel free to download the OCR demo application directly from google drive at: https://drive.google.com/file/d/1YxZNUN5SP73qWeoGEgN1mYVyykc9ckaI/view
 This apk returns the same results as the source code presented in this repository.
 
 
